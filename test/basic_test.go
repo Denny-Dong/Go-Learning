@@ -32,3 +32,11 @@ func TestFloat(t *testing.T) {
 	t.Log(reflect.TypeOf(a))
 	t.Log(reflect.TypeOf(b))
 }
+
+func TestStringMultiLine(t *testing.T) {
+	a := `First Line
+Secend Line
+Third Line
+`
+	t.Log(a)
+}
