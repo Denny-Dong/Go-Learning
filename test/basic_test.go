@@ -1,9 +1,16 @@
 package test
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestVariable(t *testing.T) {
-
+	a := 1
+	b := 2
+	a, b = b, a
+	t.Log(a)
+	t.Log(b)
 }
 
 func TestFibonacci(t *testing.T) {
@@ -17,4 +24,11 @@ func TestFibonacci(t *testing.T) {
 		a = b
 		b = c
 	}
+}
+
+func TestFloat(t *testing.T) {
+	a, b := 3.0, 2.0
+	t.Log(a / b)
+	t.Log(reflect.TypeOf(a))
+	t.Log(reflect.TypeOf(b))
 }
