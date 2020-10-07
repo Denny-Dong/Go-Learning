@@ -40,3 +40,9 @@ Third Line
 `
 	t.Log(a)
 }
+
+func TestCharacter(t *testing.T) {
+	a, b := 'a', '好'
+	c, d := "a", "好"
+	t.Log(a, b, c, d)
+}
