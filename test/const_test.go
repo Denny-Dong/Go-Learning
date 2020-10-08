@@ -2,6 +2,7 @@ package test
 
 import (
 	"reflect"
+	"runtime"
 	"testing"
 )
 
@@ -28,7 +29,13 @@ func TestMultiConst(t *testing.T) {
 }
 
 func TestOperator(t *testing.T) {
-	a := 1
-	a++
-	t.Log(a)
+	a := 9
+	b := 13
+	t.Log(a & b)
+}
+
+func TestRunTime(t *testing.T) {
+	if num := runtime.NumCPU(); num > 0 {
+		t.Log(num)
+	}
 }
