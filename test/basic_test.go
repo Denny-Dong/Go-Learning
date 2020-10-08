@@ -85,7 +85,8 @@ func TestBytesBuffer(t *testing.T) {
 func TestStringIndex(t *testing.T) {
 	a := "Denny Dong"
 	index := strings.Index(a, "y")
-	t.Log(a[:index])
+	b := a[:index]
+	t.Log(b)
 	lastIndex := strings.LastIndex(a, "n")
 	t.Log(lastIndex)
 }
