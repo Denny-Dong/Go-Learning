@@ -3,6 +3,7 @@ package test
 import (
 	"bytes"
 	"reflect"
+	"strings"
 	"testing"
 )
 
@@ -80,4 +81,20 @@ func TestBytesBuffer(t *testing.T) {
 	t.Log(c)
 	t.Log(c.String())
 	t.Log(reflect.TypeOf(c))
+}
+func TestStringIndex(t *testing.T) {
+	a := "Denny Dong"
+	index := strings.Index(a, "y")
+	t.Log(a[:index])
+	lastIndex := strings.LastIndex(a, "n")
+	t.Log(lastIndex)
+}
+
+func TestByteList(t *testing.T) {
+	a := "Denny Dong"
+	byteA := []byte(a)
+	for i := 0; i < len(a)-5; i++ {
+		byteA[i] = 'z'
+	}
+	t.Log(string(byteA))
 }
