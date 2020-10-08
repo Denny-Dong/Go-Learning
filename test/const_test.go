@@ -7,7 +7,7 @@ import (
 
 func TestConst(t *testing.T) {
 	const a = 3.1415
-	const b = "Hello World"
+	//const b = "Hello World"
 	t.Log(reflect.TypeOf(a))
 }
 
@@ -25,4 +25,10 @@ func TestMultiConst(t *testing.T) {
 	t.Log("c : ", c)
 	t.Log("d : ", d)
 	t.Log("e : ", e)
+}
+
+func TestOperator(t *testing.T) {
+	a := 1
+	a++
+	t.Log(a)
 }
