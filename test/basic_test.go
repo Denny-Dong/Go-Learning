@@ -46,3 +46,26 @@ func TestCharacter(t *testing.T) {
 	c, d := "a", "好"
 	t.Log(a, b, c, d)
 }
+
+func TestPointer(t *testing.T) {
+	var p *int
+	a := 1
+	p = &a
+	t.Log("a : ", a)
+	t.Log("&a : ", &a)
+	t.Log("p : ", p)
+	t.Log("&p : ", &p)
+	t.Log("*p : ", *p)
+	t.Log("-----------------------")
+	*p = 5
+	t.Log("a : ", a)
+	t.Log("&a : ", &a)
+	t.Log("p : ", p)
+	t.Log("&p : ", &p)
+	t.Log("*p : ", *p)
+	t.Log("-----------------------")
+	p = new(int)
+	t.Log("p : ", p)
+	t.Log("&p : ", &p)
+	t.Log("*p : ", *p)
+}
