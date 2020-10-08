@@ -47,8 +47,23 @@ func fibonacciRecursion(n int) (result int) {
 		return result
 	}
 }
+func fibonacciSwitch(n int) (result int) {
+	switch n {
+	case 1:
+		result = 1
+		return result
+	case 2:
+		result = 1
+		return result
+	default:
+		result = fibonacciSwitch(n-1) + fibonacciSwitch(n-2)
+		return result
+	}
+
+}
 
 func TestFibonacci1(t *testing.T) {
 	t.Log(fibonacciNormal(10))
 	t.Log(fibonacciRecursion(10))
+	t.Log(fibonacciSwitch(10))
 }
