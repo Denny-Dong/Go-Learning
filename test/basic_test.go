@@ -1,6 +1,7 @@
 package test
 
 import (
+	"bytes"
 	"reflect"
 	"testing"
 )
@@ -68,4 +69,15 @@ func TestPointer(t *testing.T) {
 	t.Log("p : ", p)
 	t.Log("&p : ", &p)
 	t.Log("*p : ", *p)
+}
+
+func TestBytesBuffer(t *testing.T) {
+	a := "abc"
+	b := "def"
+	var c bytes.Buffer
+	c.WriteString(a)
+	c.WriteString(b)
+	t.Log(c)
+	t.Log(c.String())
+	t.Log(reflect.TypeOf(c))
 }
