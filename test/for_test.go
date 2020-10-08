@@ -58,7 +58,6 @@ func fibonacciSwitch(n int) (result int) {
 	default:
 		result = fibonacciSwitch(n-1) + fibonacciSwitch(n-2)
 		return result
-
 	}
 
 }
