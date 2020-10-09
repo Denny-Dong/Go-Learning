@@ -62,7 +62,7 @@ func fibonacciSwitch(n int) (result int) {
 
 }
 
-func TestFibonacci1(t *testing.T) {
+func TestFibonacciMultiImplement(t *testing.T) {
 	t.Log(fibonacciNormal(10))
 	t.Log(fibonacciRecursion(10))
 	t.Log(fibonacciSwitch(10))
