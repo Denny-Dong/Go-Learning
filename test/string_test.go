@@ -2,9 +2,14 @@ package test
 
 import (
 	"bytes"
+	"errors"
 	"reflect"
 	"testing"
 )
+
+func returnErr() error {
+	return errors.New("newErr")
+}
 
 func TestString(t *testing.T) {
 	a := "abc"
@@ -15,4 +20,11 @@ func TestString(t *testing.T) {
 	t.Log(c)
 	t.Log(c.String())
 	t.Log(reflect.TypeOf(c))
+
+	a = "ssss"
+	t.Log(a)
+
+	err := errors.New("")
+	err = returnErr()
+	t.Log(err)
 }
